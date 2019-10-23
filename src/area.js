@@ -1,7 +1,8 @@
 const readlineSync = require("readline-sync");
 
-const w = readlineSync.question("\nWidth: ");
-const l = readlineSync.question("Length: ");
-const c = 25.4;
-const a = w * c * l * c;
-console.log("\nA(n) " + w + "-by-" + l + "-inch sheet of paper has an area of " +a+ " square millimeter(s)")
+const width = readlineSync.question("\nWidth: ");
+const length = readlineSync.question("Length: ");
+const conversionMM = 25.4;
+const area = width * conversionMM * length * conversionMM;
+area = area.toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2});
+console.log("\nA(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " +area+ " square millimeter(s)")
