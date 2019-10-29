@@ -11,7 +11,7 @@ const sunday = parseFloat(readlineSync.question("Sunday: "));
 
 const thisWeekPay = (monday + tuesday + wednesday + thursday + friday + saturday + sunday) * hourlyWage
 
-const thisWeekPayRounded = weekPay.toFixed(2);
-const thisWeekPayFormatted = thisWeekPayRounded.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+const thisWeekPayRounded = thisWeekPay.toFixed(2);
+const thisWeekPayDisplay = thisWeekPayRounded.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 
-console.log("\nYou'll make $" + thisWeekPayFormatted + " this week.")
+console.log("\nYou'll make $" + thisWeekPayDisplay + " this week.")
