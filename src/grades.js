@@ -1,34 +1,34 @@
 const readlineSync = require("readline-sync");
 
-const weightHW = 0.15;
-const weightQ = 0.35;
-const weightT = 0.5;
+const weightHomework = 0.15;
+const weightQuiz = 0.35;
+const weightTest = 0.5;
 
-let hwGrade1 = readlineSync.question("\nEnter three homework grades.\n");
-let hwGrade2 = readlineSync.question("");
-let hwGrade3 = readlineSync.question("");
-let qGrade1 = readlineSync.question("\nEnter three quiz grades.\n");
-let qGrade2 = readlineSync.question("");
-let qGrade3 = readlineSync.question("");
-let tGrade1 = readlineSync.question("\nEnter three test grades.\n");
-let tGrade2 = readlineSync.question("");
-let tGrade3 = readlineSync.question("");
+let homeworkGrade1 = readlineSync.question("\nEnter three homework grades.\n");
+let homeworkGrade2 = readlineSync.question("");
+let homeworkGrade3 = readlineSync.question("");
+let quizGrade1 = readlineSync.question("\nEnter three quiz grades.\n");
+let quizGrade2 = readlineSync.question("");
+let quizGrade3 = readlineSync.question("");
+let testGrade1 = readlineSync.question("\nEnter three test grades.\n");
+let testGrade2 = readlineSync.question("");
+let testGrade3 = readlineSync.question("");
 
-hw1 = Number (hwGrade1);
-hw2 = Number (hwGrade2);
-hw3 = Number (hwGrade3);
-q1 = Number (qGrade1);
-q2 = Number (qGrade2);
-q3 = Number (qGrade3);
-t1 = Number (tGrade1);
-t2 = Number (tGrade2);
-t3 = Number (tGrade3);
-let hwTotal = hw1 + hw2 + hw3;
-let hwAvg = hwTotal / 3;
-let qTotal = q1 + q2 + q3;
-let qAvg = qTotal / 3;
-let tTotal = t1 + t2 + t3;
-let tAvg = tTotal / 3;
-let finalGrade = weightHW * hwAvg + weightQ * qAvg + weightT * tAvg;
-finalGrade = finalGrade.toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2});
-console.log("\nYour marking period grade is " + finalGrade + "%.")
+homework1 = Number (homeworkGrade1);
+homework2 = Number (homeworkGrade2);
+homework3 = Number (homeworkGrade3);
+quiz1 = Number (quizGrade1);
+quiz2 = Number (quizGrade2);
+quiz3 = Number (quizGrade3);
+test1 = Number (testGrade1);
+test2 = Number (testGrade2);
+test3 = Number (testGrade3);
+let homeworkTotal = homework1 + homework2 + homework3;
+let homeworkAverage = homeworkTotal / 3;
+let quizTotal = quiz1 + quiz2 + quiz3;
+let quizAverage = quizTotal / 3;
+let testTotal = test1 + test2 + test3;
+let testAverage = testTotal / 3;
+let markingPeriodGrade = weightHomework * homeworkAverage + weightQuiz * quizAverage + weightTest * testAverage;
+markingPeriodGrade = markingPeriodGrade.toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2});
+console.log("\nYour marking period grade is " + markingPeriodGrade + "%.")
